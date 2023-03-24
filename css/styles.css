@@ -222,13 +222,14 @@ img {
   align-items: center;
   padding: 16px 32px;
   margin: 0 auto;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
   color: var(--porfolio-background-colour);
   background: var(--accent-colour);
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* /Hero section */
@@ -513,7 +514,7 @@ footer .team-social-link:is(:hover, :focus) {
   background-color: #31d0aa;
 }
 
-.footer-subscribe .hero-btn {
+.footer-form .hero-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -529,14 +530,14 @@ footer .team-social-link:is(:hover, :focus) {
   color: #ffffff;
 }
 
-.footer-subscribe {
+.footer-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
 }
 
-.footer-subscribe .form-input {
+.footer-form .form-input {
   width: 264px;
   height: 40px;
   background-color: transparent;
@@ -544,7 +545,8 @@ footer .team-social-link:is(:hover, :focus) {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: white;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-icon {
@@ -563,13 +565,14 @@ footer .team-social-link:is(:hover, :focus) {
   left: 0;
   transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     visibility 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 80px;
 }
 
 .is-hidden {
 }
 .modal {
   width: 408px;
-  min-height: 577px;
+  height: 577px;
   background: #ffffff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -577,9 +580,8 @@ footer .team-social-link:is(:hover, :focus) {
 
   padding: 0 24px 24px 24px;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translateX(-50%) scale(1);
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close {
@@ -599,6 +601,7 @@ footer .team-social-link:is(:hover, :focus) {
   top: 24px;
   right: 12px;
   transform: translateX(-50%) scale(1);
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-button {
   fill: black;
@@ -632,7 +635,7 @@ footer .team-social-link:is(:hover, :focus) {
   letter-spacing: 0.02em;
   color: #2e2f42;
 
-  margin-top: 72px;
+  padding-top: 72px;
   margin-bottom: 8px;
 }
 
@@ -645,6 +648,7 @@ footer .team-social-link:is(:hover, :focus) {
   color: #2e2f42;
 
   padding-left: 36px;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
@@ -672,21 +676,29 @@ footer .team-social-link:is(:hover, :focus) {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+
+  display: block;
+  padding-top: 8px;
+  padding-left: 16px;
 }
 
-.form-group span {
+.form-label {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+
+  display: block;
+  margin-bottom: 4px;
 }
 .form-icon {
   position: absolute;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-group {
   margin-bottom: 8px;
@@ -729,21 +741,24 @@ footer .team-social-link:is(:hover, :focus) {
   align-items: center;
   justify-content: center;
 }
-.form-checkbox:checked + .form-checkbox-label::before {
-  background-color: #404bbf;
-  border-color: #404bbf;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .form-checkbox-icon {
   fill: transparent;
   position: absolute;
-  left: 3px;
+  border-radius: 2px;
+  left: 0;
   top: 25%;
+  transform: translateY(-25%);
 }
 .form-checkbox:checked + .form-checkbox-icon {
-  fill: white;
-  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  fill: rgb(255, 255, 255);
+  background-color: #404bbf;
+  border-color: #404bbf;
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-checkbox{
+  opacity:0;
 }
 
 .modal-form .hero-btn {

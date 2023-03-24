@@ -449,7 +449,6 @@
         </div>
 
         <form class="footer-form">
-        <div class="footer-subscribe">
           <h3 class="footer-head">Subscribe</h3>
           <label for="email" class="footee-label"></label>
           <input
@@ -466,7 +465,6 @@
               <use href="./images/svg/symbol.svg#icon-subscribe"></use>
             </svg>
           </button>
-        </div>
         </form>
       </div>
     </footer>
@@ -478,7 +476,7 @@
         </h3>
         <form class="modal-form form">
           <div class="form-group">
-            <label for="name" class="form-label"><span>Name</span></label>
+            <label for="name" class="form-label">Name</label>
             <div class="form-control">
               <input
                 type="text"
@@ -494,7 +492,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="phone" class="form-label"><span>Phone</span></label>
+            <label for="phone" class="form-label">Phone</label>
             <div class="form-control">
               <input
                 type="tel"
@@ -509,7 +507,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="form-group-email" class="form-label"><span>Email</span></label>
+            <label for="form-group-email" class="form-label">Email</label>
             <div class="form-control">
               <input
                 type="email"
@@ -524,34 +522,29 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="textarea" class="form-label"
-              ><span>Comment</span></label
-            >
-            <div class="form-control">
-              <textarea
-                name="message"
-                id="textarea"
-                class="form-textarea"
-                placeholder="Text input"
-              ></textarea>
-            </div>
+            <label for="textarea" class="form-label">Comment</label>
+
+            <textarea
+              name="message"
+              id="textarea"
+              class="form-textarea"
+              placeholder="Text input"
+            ></textarea>
           </div>
 
-          <input
-            type="checkbox"
-            class="form-checkbox hidden"
-            id="policy"
-            name="policy"
-          />
           <label for="policy" class="form-checkbox-label">
-            <span>
-              <svg class="form-checkbox-icon" width="10" height="8">
-                <use href="../images/svg/symbol.svg#icon-vector"></use>
-              </svg>
-            </span>
-            I accept the terms and conditions of the
-            <a href="" class="privacy-text">Privacy Policy</a></label
-          >
+            <input
+              type="checkbox"
+              class="form-checkbox"
+              id="policy"
+              name="policy"
+            />
+            <svg class="form-checkbox-icon" width="16" height="16">
+              <use href="../images/svg/symbol.svg#icon-vector"></use>
+            </svg>
+            <span>I accept the terms and conditions of the </span>
+            <a href="" class="privacy-text">Privacy Policy</a>
+          </label>
           <button type="submit" class="hero-btn">Send</button>
         </form>
 
