@@ -749,6 +749,7 @@ footer .team-social-link:is(:hover, :focus) {
 }
 
 .form-checkbox-icon {
+  overflow: hidden;
   border-radius: 0.05em;
   background-color: white;
   background-repeat: no-repeat;
@@ -763,7 +764,7 @@ footer .team-social-link:is(:hover, :focus) {
   transform: translateY(-25%);
 }
 .form-checkbox:checked + .form-checkbox-icon {
-  fill: rgb(255, 255, 255);
+  fill:white;
   background-color: #404bbf;
   border-color: #404bbf;
   transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1),
