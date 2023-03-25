@@ -531,8 +531,10 @@ footer .team-social-link:is(:hover, :focus) {
 }
 
 .footer-form {
+}
+
+.footer-form-position {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
 }
@@ -545,8 +547,9 @@ footer .team-social-link:is(:hover, :focus) {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: white;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  margin-right: 24px;
 }
 
 .subscribe-icon {
@@ -572,13 +575,14 @@ footer .team-social-link:is(:hover, :focus) {
 }
 .modal {
   width: 408px;
-  height: 577px;
+  height: 584px;
   background: #ffffff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   padding: 0 24px 24px 24px;
+  padding-top: 72px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) scale(1);
@@ -605,14 +609,13 @@ footer .team-social-link:is(:hover, :focus) {
 }
 .close-button {
   fill: black;
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:is(:hover, :focus) {
   background-color: #404bbf;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover .close-button {
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   fill: white;
 }
 
@@ -635,7 +638,6 @@ footer .team-social-link:is(:hover, :focus) {
   letter-spacing: 0.02em;
   color: #2e2f42;
 
-  padding-top: 72px;
   margin-bottom: 8px;
 }
 
@@ -648,7 +650,7 @@ footer .team-social-link:is(:hover, :focus) {
   color: #2e2f42;
 
   padding-left: 36px;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
@@ -698,10 +700,10 @@ footer .team-social-link:is(:hover, :focus) {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-group {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .form-control {
   position: relative;
@@ -743,9 +745,16 @@ footer .team-social-link:is(:hover, :focus) {
 }
 
 .form-checkbox-icon {
+  overflow: hidden;
+  border-radius: 0.05em;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em #4a90e2;
   fill: transparent;
-  position: absolute;
   border-radius: 2px;
+
+  position: absolute;
   left: 0;
   top: 25%;
   transform: translateY(-25%);
@@ -754,11 +763,15 @@ footer .team-social-link:is(:hover, :focus) {
   fill: rgb(255, 255, 255);
   background-color: #404bbf;
   border-color: #404bbf;
-  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-checkbox{
-  opacity:0;
+.form-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
 .modal-form .hero-btn {
