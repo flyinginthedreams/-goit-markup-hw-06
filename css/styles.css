@@ -749,7 +749,6 @@ footer .team-social-link:is(:hover, :focus) {
 }
 
 .form-checkbox-icon {
-  overflow: hidden;
   border-radius: 0.05em;
   background-color: white;
   background-repeat: no-repeat;
