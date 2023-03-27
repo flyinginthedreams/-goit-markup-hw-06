@@ -747,6 +747,13 @@ footer .team-social-link:is(:hover, :focus) {
   align-items: center;
   justify-content: center;
 }
+.form-checkbox:checked + .form-checkbox-icon {
+  fill:white;
+  background-color: #404bbf;
+  border-color: #404bbf;
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .form-checkbox-icon {
   overflow: hidden;
@@ -763,13 +770,7 @@ footer .team-social-link:is(:hover, :focus) {
   top: 25%;
   transform: translateY(-25%);
 }
-.form-checkbox:checked + .form-checkbox-icon {
-  fill:white;
-  background-color: #404bbf;
-  border-color: #404bbf;
-  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .form-checkbox {
   position: absolute;
